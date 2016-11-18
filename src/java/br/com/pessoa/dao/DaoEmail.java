@@ -1,5 +1,5 @@
 
-package br.com.pessoa.control;
+package br.com.pessoa.dao;
 
 import java.util.Properties;
 import javax.mail.Authenticator;
@@ -11,7 +11,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 
-public class ControlEmail {
+public class DaoEmail {
     
     private String mailSMTPServer;
     private String mailSMTPServerPort;

@@ -1,6 +1,6 @@
 package br.com.pessoa.servlet;
 
-import br.com.pessoa.control.ControlEmail;
+import br.com.pessoa.dao.DaoEmail;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,9 +25,11 @@ public class Servlet extends HttpServlet {
         System.out.println(nome+email+assunto+descricao);
 
         String mensagem = "Nome: "+nome+"\nEmail: "+email+"\nMensagem: "+ descricao;
-        ControlEmail ctrlEmail = new ControlEmail();
+        DaoEmail ctrlEmail = new DaoEmail();
         ctrlEmail.sendMail("izzisac@gmail.com", "izzisac@gmail.com", assunto, mensagem);
         
         response.sendRedirect("Ok.html");
+        
+        response.sendError(0);
     }
 }
